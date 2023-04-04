@@ -1,4 +1,4 @@
-package com.example.newapp
+package com.example.PlayerJava
 
 import org.junit.Test
 
