@@ -11,12 +11,6 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.util.Random;
-
-public class MainActivity extends AppCompatActivity {
-
-    MediaPlayer mPlayer = null;
-    ImageButton playButton, pauseButton, stopButton, nextButton;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,12 +18,23 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 public class MainActivity extends AppCompatActivity {
+
+    MediaPlayer mPlayer = null;
+    ImageButton playButton, pauseButton, stopButton, nextButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button button = findViewById(R.id.alarm_buton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MainActivityAlarm.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
 
         chooseSong(); // первый трек при запуске
         mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -110,13 +115,6 @@ public class MainActivity extends AppCompatActivity {
         if (mPlayer.isPlaying()) {
             stopPlay();
         }
-        Button button = findViewById(R.id.alarm_buton);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivityAlarm.class);
-                MainActivity.this.startActivity(intent);
-            }
-        });
+
     }
 }
