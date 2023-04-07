@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">PlayerJava</string>
+    <string name="app_name">Alarm</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
 </resources>
