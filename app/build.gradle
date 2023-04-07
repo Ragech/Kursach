@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.sunmoonproj'
+    namespace 'com.example.playerjava'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.sunmoonproj"
+        applicationId "com.example.playerjava"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -29,6 +29,7 @@ android {
 }
 
 dependencies {
+
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
