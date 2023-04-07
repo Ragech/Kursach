@@ -9,7 +9,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NewApp"
+        android:theme="@style/Theme.Alarm"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
@@ -20,6 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivityAlarm"/>
+        <activity android:name=".AddActivity"/>
+        <receiver android:name=".AlarmReceiver"/>
+        <service android:name=".Music"
+            android:enabled="true"/>
     </application>
 
 </manifest>
