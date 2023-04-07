@@ -1,4 +1,4 @@
-package com.example.alarm;
+package com.example.playerjava;
 
 import android.content.ContentValues;
 import android.content.Context;

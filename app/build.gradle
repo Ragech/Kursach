@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.alarm'
+    namespace 'com.example.playerjava'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.alarm"
+        applicationId "com.example.playerjava"
         minSdk 24
         targetSdk 33
         versionCode 1

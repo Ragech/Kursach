@@ -1,4 +1,4 @@
-package com.example.alarm;
+package com.example.playerjava;
 
 import android.app.Service;
 import android.content.Intent;
@@ -29,3 +29,4 @@ public class Music extends Service {
         mediaPlayer.stop();
     }
 }
+
