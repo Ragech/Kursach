@@ -10,6 +10,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+<<<<<<< Updated upstream
+=======
+import com.example.playerjava.R;
+
+>>>>>>> Stashed changes
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
