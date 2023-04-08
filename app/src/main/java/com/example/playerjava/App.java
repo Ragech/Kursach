@@ -25,7 +25,7 @@ public class App extends Application {
         instance = this;
 
         database = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "app-db-name")
+                        AppDatabase.class, "app-db-name")
                 .allowMainThreadQueries()
                 .build();
 
