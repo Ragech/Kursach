@@ -1,4 +1,4 @@
-package com.arhiser.todolist.model;
+package com.example.playerjava.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

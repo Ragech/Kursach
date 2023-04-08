@@ -1,10 +1,10 @@
-package com.arhiser.todolist.screens.main;
+package com.example.playerjava.screens.main;
 
 import android.os.Bundle;
 
-import com.arhiser.todolist.R;
-import com.arhiser.todolist.model.Note;
-import com.arhiser.todolist.screens.details.NoteDetailsActivity;
+import com.example.playerjava.R;
+import com.example.playerjava.model.Note;
+import com.example.playerjava.screens.details.NoteDetailsActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,11 +26,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_notes);
+        setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
 
         recyclerView = findViewById(R.id.list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);

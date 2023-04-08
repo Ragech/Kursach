@@ -1,11 +1,11 @@
-package com.arhiser.todolist;
+package com.example.playerjava;
 
 import android.app.Application;
 
 import androidx.room.Room;
 
-import com.arhiser.todolist.data.AppDatabase;
-import com.arhiser.todolist.data.NoteDao;
+import com.example.playerjava.data.AppDatabase;
+import com.example.playerjava.data.NoteDao;
 
 public class App extends Application {
 

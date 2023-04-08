@@ -1,4 +1,4 @@
-package com.arhiser.todolist;
+package com.example.playerjava;
 
 import org.junit.Test;
 

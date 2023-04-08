@@ -1,4 +1,4 @@
-package com.arhiser.todolist.screens.details;
+package com.example.playerjava.screens.details;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,9 +12,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.arhiser.todolist.App;
-import com.arhiser.todolist.R;
-import com.arhiser.todolist.model.Note;
+import com.example.playerjava.App;
+import com.example.playerjava.R;
+import com.example.playerjava.model.Note;
 
 public class NoteDetailsActivity extends AppCompatActivity {
 

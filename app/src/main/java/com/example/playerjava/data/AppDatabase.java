@@ -1,9 +1,9 @@
-package com.arhiser.todolist.data;
+package com.example.playerjava.data;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
-import com.arhiser.todolist.model.Note;
+import com.example.playerjava.model.Note;
 
 @Database(entities = {Note.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {

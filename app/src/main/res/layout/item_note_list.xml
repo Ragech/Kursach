@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#3E5F8A">
 
     <TextView
         android:id="@+id/note_text"

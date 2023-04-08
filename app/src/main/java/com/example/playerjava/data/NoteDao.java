@@ -1,4 +1,4 @@
-package com.arhiser.todolist.data;
+package com.example.playerjava.data;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -8,7 +8,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.arhiser.todolist.model.Note;
+import com.example.playerjava.model.Note;
 
 import java.util.List;
 

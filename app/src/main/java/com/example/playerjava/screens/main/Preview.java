@@ -1,4 +1,4 @@
-package com.arhiser.todolist.screens.main;
+package com.example.playerjava.screens.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,20 +7,20 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.arhiser.todolist.R;
+import com.example.playerjava.R;
 
-public class hi extends AppCompatActivity {
+public class Preview  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_preview);
 
-        Button button = findViewById(R.id.button2);
+        Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(hi.this, MainActivity.class);
-                hi.this.startActivity(intent);
+                Intent intent = new Intent(Preview.this, MainActivity.class);
+                Preview.this.startActivity(intent);
             }
         });
     }
