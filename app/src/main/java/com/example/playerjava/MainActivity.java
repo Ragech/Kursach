@@ -1,4 +1,4 @@
-package com.example.playerjava.screens.main;
+package com.example.playerjava;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,19 +8,20 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.playerjava.R;
+import com.example.playerjava.screens.main.MainActivityNotes;
 
-public class Preview  extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_preview);
+        setContentView(R.layout.activity_main);
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Preview.this, MainActivity.class);
-                Preview.this.startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, MainActivityNotes.class);
+                MainActivity.this.startActivity(intent);
             }
         });
     }
