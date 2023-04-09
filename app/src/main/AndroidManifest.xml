@@ -30,6 +30,11 @@
 
         <activity android:name="com.example.playerjava.screens.details.NoteDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".MainActivityAlarm"/>
+        <activity android:name=".AddActivity"/>
+        <receiver android:name=".AlarmReceiver"/>
+        <service android:name=".Music"
+            android:enabled="true"/>
     </application>
 
 
