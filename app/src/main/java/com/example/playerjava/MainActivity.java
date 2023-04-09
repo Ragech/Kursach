@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(intent);
             }
         });
-        Button button = findViewById(R.id.alarm_buton);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button button1 = findViewById(R.id.alarm_buton);
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MainActivityAlarm.class);
@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         mPlayer.stop();
         chooseSong();
         mPlayer.start();
+        pauseButton.setEnabled(true);
     }
 
     public void next(View view){
