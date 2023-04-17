@@ -2,32 +2,62 @@ package com.example.playerjava;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
-import java.util.Random;
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
-import androidx.appcompat.app.AppCompatActivity;
-import com.example.playerjava.R;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import com.google.android.material.timepicker.MaterialTimePicker;
+import com.google.android.material.timepicker.TimeFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 import com.example.playerjava.screens.main.MainActivityNotes;
+
 
 public class MainActivity extends AppCompatActivity {
 
     MediaPlayer mPlayer = null;
+    Button setAlarm;
     ImageButton playButton, pauseButton, stopButton, nextButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+
+        setAlarm = findViewById(R.id.alarm_button);
+
+        setAlarm.setOnClickListener(v -> {
+            MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
+                    .setTimeFormat(TimeFormat.CLOCK_24H)
+                    .setHour(12)
+                    .setMinute(0)
+                    .setTitleText("Выберите время для будильника")
+                    .build();
+
+            materialTimePicker.addOnPositiveButtonClickListener(view -> {
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(Calendar.SECOND, 0);
+                calendar.set(Calendar.MILLISECOND, 0);
+                calendar.set(Calendar.MINUTE, materialTimePicker.getMinute());
+                calendar.set(Calendar.HOUR_OF_DAY, materialTimePicker.getHour());
+
+                AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+
+                AlarmManager.AlarmClockInfo alarmClockInfo = new AlarmManager.AlarmClockInfo(calendar.getTimeInMillis(), getAlarmInfoPendingIntent());
+
+                alarmManager.setAlarmClock(alarmClockInfo, getAlarmActionPendingIntent());
+                Toast.makeText(this, "Будильник установлен на " + sdf.format(calendar.getTime()), Toast.LENGTH_SHORT).show();
+            });
+
+            materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
+        });
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -37,11 +67,13 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(intent);
             }
         });
-        Button button1 = findViewById(R.id.alarm_buton);
-        button1.setOnClickListener(new View.OnClickListener() {
+
+
+        Button articles = findViewById(R.id.articles);
+        articles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivityAlarm.class);
+                Intent intent = new Intent(MainActivity.this, MainActivityArticles.class);
                 MainActivity.this.startActivity(intent);
             }
         });
@@ -61,6 +93,17 @@ public class MainActivity extends AppCompatActivity {
         pauseButton.setEnabled(false);
         stopButton.setEnabled(false);
         nextButton.setEnabled(false);
+    }
+    private PendingIntent getAlarmInfoPendingIntent() {
+        Intent alarmInfoIntent = new Intent(this, MainActivity.class);
+        alarmInfoIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        return PendingIntent.getActivity(this, 0, alarmInfoIntent, PendingIntent.FLAG_IMMUTABLE);
+    }
+
+    private PendingIntent getAlarmActionPendingIntent() {
+        Intent intent = new Intent(this, AlarmActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        return PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_IMMUTABLE);
     }
 
     private void chooseSong() {
