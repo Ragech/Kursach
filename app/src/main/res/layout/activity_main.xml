@@ -1,22 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3E5F8A">
+    android:background="#dedddc">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:layout_alignParentTop="true"
+        android:alpha="1"
+        android:background="#00c4c0b7"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp">
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:text="sunmoon"-->
+        <!--            android:textSize="24sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:textColor="#F6DBAD"/>-->
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#00c4c0b7"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/alarm_buton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius"
+            android:text="Будильник"
+            android:textColor="#fff"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius"
+            android:textColor="#fff"
+            android:text="Button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/radius"
+        android:gravity="center"
+        android:orientation="horizontal">
 
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="159dp"
-        android:layout_height="68dp"
-        android:text="Create Plan"
-        android:textSize="6pt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#00c4c0b7"
+            android:onClick="play"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#00c4c0b7"
+            android:onClick="pause"
+            app:srcCompat="@android:drawable/ic_media_pause" />
+
+        <ImageButton
+            android:id="@+id/stopButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/krest"
+            android:onClick="stop" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#00c4c0b7"
+            android:onClick="next"
+            app:srcCompat="@android:drawable/ic_media_next" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
