@@ -36,5 +36,61 @@ public class MainActivityArticles extends AppCompatActivity {
             }
         });
 
+        Button articl4_but = findViewById(R.id.articl4);
+        articl4_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.article_four);
+            }
+        });
+
+        Button articl5_but = findViewById(R.id.articl5);
+        articl5_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.article_five);
+            }
+        });
+
+        Button articl6_but = findViewById(R.id.articl6);
+        articl6_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.article_six);
+            }
+        });
+
+        Button articl7_but = findViewById(R.id.articl7);
+        articl7_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.article_seven);
+            }
+        });
+
+        Button articl8_but = findViewById(R.id.articl8);
+        articl8_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.article_eight);
+            }
+        });
+
+        Button articl9_but = findViewById(R.id.articl9);
+        articl9_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.article_nine);
+            }
+        });
+
+        Button articl10_but = findViewById(R.id.articl10);
+        articl10_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.article_ten);
+            }
+        });
+
     }
 }
