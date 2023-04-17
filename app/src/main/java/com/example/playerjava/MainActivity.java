@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 calendar.set(Calendar.MILLISECOND, 0);
                 calendar.set(Calendar.MINUTE, materialTimePicker.getMinute());
                 calendar.set(Calendar.HOUR_OF_DAY, materialTimePicker.getHour());
+                if (calendar.getTimeInMillis() < System.currentTimeMillis()) {
+                    calendar.add(Calendar.DATE, 1);
+                }
 
                 AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
