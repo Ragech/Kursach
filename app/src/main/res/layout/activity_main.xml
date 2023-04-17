@@ -4,19 +4,131 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3E5F8A">
+    android:background="#fffefd">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#70D9D9D9"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:paddingVertical="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="SUNMOON"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#44403c"/>
+
+
+    </LinearLayout>
 
 
     <Button
+
         android:id="@+id/button"
+<<<<<<< Updated upstream
         android:layout_width="159dp"
         android:layout_height="68dp"
         android:text="Create Plan"
+=======
+        android:layout_width="145dp"
+        android:layout_height="139dp"
+        android:background="#44403C"
+        android:text="Дневник"
+>>>>>>> Stashed changes
+        android:textSize="6pt"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+<<<<<<< Updated upstream
+        app:layout_constraintVertical_bias="0.303" />
+=======
+        app:layout_constraintVertical_bias="0.197"
+        app:strokeColor="#221919"
+        app:strokeWidth="10dp" />
+
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="648dp"
+        android:background="#44403c"
+        android:onClick="play"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/pauseButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="648dp"
+        android:background="#44403c"
+        android:onClick="next"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toRightOf="@id/stopButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <ImageButton
+        android:id="@+id/stopButton"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="648dp"
+        android:background="#44403c"
+        android:onClick="stop"
+        app:layout_constraintLeft_toRightOf="@id/pauseButton"
+        app:layout_constraintRight_toLeftOf="@id/nextButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ImageButton
+        android:id="@+id/pauseButton"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="648dp"
+        android:background="#44403c"
+        android:onClick="pause"
+        app:layout_constraintLeft_toRightOf="@id/playButton"
+        app:layout_constraintRight_toLeftOf="@id/stopButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_media_pause" />
+
+    <Button
+        android:id="@+id/alarm_button"
+        android:layout_width="146dp"
+        android:layout_height="139dp"
+        android:background="#44403C"
+        android:text="Будильник"
         android:textSize="6pt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
+        app:layout_constraintVertical_bias="0.474" />
+
+    <Button
+        android:id="@+id/articles"
+        android:layout_width="150dp"
+        android:layout_height="138dp"
+        android:background="#44403C"
+        android:text="Сомнолог"
+        android:textSize="6pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
+>>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>
