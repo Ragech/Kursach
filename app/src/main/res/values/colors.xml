@@ -10,6 +10,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="bg">#9DB1CC</color>
+    <color name="bg">#dedddc</color>
+    <color name="dark">#44403c</color>
     <color name="navbar">#A6CAF0</color>
 </resources>

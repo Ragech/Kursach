@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" >
 
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,8 +17,7 @@
         <activity
             android:exported="true"
             android:name="com.example.playerjava.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,8 +32,12 @@
 
         <activity android:name="com.example.playerjava.screens.details.NoteDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".MainActivityAlarm"/>
+        <activity android:name=".AlarmActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity android:name=".AddActivity"/>
+        <activity android:name=".MainActivityArticles"/>
         <receiver android:name=".AlarmReceiver"/>
         <service android:name=".Music"
             android:enabled="true"/>

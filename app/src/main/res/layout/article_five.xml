@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textzagol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Метод &quot;Пляж&quot;"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <ScrollView
+        android:layout_width="382dp"
+        android:layout_height="666dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textzagol"
+        tools:layout_editor_absoluteX="9dp">
+
+        <TextView
+            android:id="@+id/textosn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="За 1 минуту, практикуя это упражнение, Вы не заснете, а вот за 5 минут точно ощутите сильную сонливость.\n
+Техника выполнения упражнения:\n
+1. Лягте на спину, свободно раскинув ноги и руки.\n
+2. Накройтесь одеялом либо простыней (открытой должна остаться только голова).\n
+3. Представьте, что Вы находитесь на безлюдном песчаном пляже, и теплый песок согревает Ваше тело.\n
+4. Песок сыпется на Вашу правую кисть и совсем скоро покрывает всю руку от запястья до плеча. Ваша правая рука под весом теплого песка становится тяжелой.\n
+5. Теперь теплый песок медленно присыпает Вашу левую руку, которая также тяжелеет.\n
+6. Приходит черед ног: сначала песок от ступни до бедра покрывает правую ногу, а затем и левую. Ноги становятся тяжелыми и теплыми.\n
+7. Песок добрался до низа живота, боков, груди и шеи, при этом Вы не должны ощущать, что песок давит Вам на грудь и затрудняет дыхание.\n
+8. Лицо приятно согревают лучи летнего солнца. При этом Вы не испытываете удушающей жары, ведь Ваше лицо обдувается легким ветерком.\n
+9. Лоб расслаблен. Когда тело полностью погрузится в песок, Вы обязательно почувствуете расслабление и сонливость."
+           android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.726" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
