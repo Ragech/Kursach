@@ -98,12 +98,13 @@
 
                     <Button
                         android:id="@+id/articles"
-                        android:layout_width="wrap_content"
+                        android:layout_width="155dp"
                         android:layout_height="40dp"
                         app:backgroundTint="@null"
                         android:background="@drawable/light_button"
                         android:paddingHorizontal="25dp"
-                        android:text="Советы дня" />
+                        android:text="Советы дня"
+                        android:textColor="@color/dark"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -171,12 +172,13 @@
 
                     <Button
                         android:id="@+id/button"
-                        android:layout_width="wrap_content"
+                        android:layout_width="155dp"
                         android:layout_height="40dp"
                         app:backgroundTint="@null"
                         android:background="@drawable/light_button"
                         android:paddingHorizontal="25dp"
-                        android:text="Создать" />
+                        android:text="Создать"
+                        android:textColor="@color/dark"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -244,7 +246,7 @@
 
                     <Button
                         android:id="@+id/alarm_button"
-                        android:layout_width="wrap_content"
+                        android:layout_width="155dp"
                         android:layout_height="40dp"
                         app:backgroundTint="@null"
                         android:background="@drawable/radius"

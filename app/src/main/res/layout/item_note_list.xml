@@ -7,7 +7,9 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:gravity="center"
-    android:background="#3E5F8A">
+    android:background="@drawable/light_block"
+    android:layout_marginTop="5dp"
+    android:layout_marginHorizontal="5dp">
 
     <TextView
         android:id="@+id/note_text"
@@ -16,7 +18,9 @@
         android:layout_weight="1"
         android:minHeight="64dp"
         android:gravity="center_vertical"
-        tools:text="some text for testing"/>
+        tools:text="some text for testing"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
 
     <CheckBox
         android:id="@+id/completed"

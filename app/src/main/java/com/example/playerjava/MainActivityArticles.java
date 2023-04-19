@@ -6,8 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
 
 public class MainActivityArticles extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,5 +98,7 @@ public class MainActivityArticles extends AppCompatActivity {
             }
         });
 
+
     }
+
 }
