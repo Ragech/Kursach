@@ -320,7 +320,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "Бада Уинтера"'
+                                android:text='Метод "пляж"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -383,7 +383,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "пляж"'
+                                android:text='Метод "Бада Уинтера"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -446,7 +446,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Визуализации дня'
+                                android:text='Метод "цветовой гаммы"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -507,7 +507,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "цветовой гаммы"'
+                                android:text='Визуализация дня'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
