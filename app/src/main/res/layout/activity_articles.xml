@@ -131,7 +131,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "4-7-8"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -194,7 +194,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "каменная статуя"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -257,7 +257,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "Суворова"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -320,7 +320,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "Бада Уинтера"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -383,7 +383,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "пляж"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -446,7 +446,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Визуализации дня'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -507,7 +507,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "цветовой гаммы"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -569,7 +569,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "дыхание ушами"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -631,7 +631,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Небольшие методы'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
