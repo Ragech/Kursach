@@ -1,108 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/bg"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-
-    <LinearLayout
-        android:id="@+id/somnolog_bar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/dark"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text='Метод "4-7-8"'
-            android:textStyle="bold"
-            android:textSize="24dp"
-            android:textColor="@color/bg"/>
-    </LinearLayout>
-
-
+    <TextView
+        android:id="@+id/textzagol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Метод 4–7–8"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
 
     <ScrollView
-        android:gravity="center"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_below="@+id/somnolog_bar"
-        android:layout_marginBottom="85dp">
+        android:layout_width="390dp"
+        android:layout_height="665dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textzagol"
+        tools:layout_editor_absoluteX="1dp">
 
         <TextView
+            android:id="@+id/textosn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="15dp"
-            android:text="Данная дыхательная техника быстрого засыпания практиковалась столетиями еще индийскими йогами, а впоследствии была изучена доктором Эндрю Вейлом. Кстати, метод 4–7–8 используют сотрудники американских спецслужб для быстрого восстановления сил в экстремальных условиях (ведь именно во сне происходит активное восстановление организма). Метод Вейла успокаивает нервную систему, уменьшает проявления стресса и тревожности.\nСуть метода:\nЗаймите удобную позу в постели. Сосредоточьтесь на своем дыхании на 10 – 15 секунд. Сделайте глубокий вдох через нос на 4 счета. Задержите дыхание на 7 секунд. Сделайте глубокий выдох ртом, растянув его на 8 секунд. Повторите технику 2 – 3 раза, Вы почувствуете, как сонная нега окутывает Ваше тело и сознание. В идеале необходимо, чтобы при выполнении техники кончик языка касался верхнего неба возле корней зубов. Но если добиться такого положения языка Вам сложно, опустите этот момент. Как работает техника? Стресс, ощущение беспокойства и тревоги повышают уровень адреналина в крови. В итоге учащается сердечный ритм, тогда как дыхание становится поверхностным. Задержка дыхания с последующим неторопливым выдохом приводит к замедлению сердечного ритма и нормализации дыхания. Кроме того, метод 4–7–8 помогает очистить разум от переживаний, ведь выполнение техники предполагает сосредоточение на дыхании и счете, а потому у Вас не будет возможности думать о дне прошедшем. Наконец, дыхание в монотонном цикличном ритме успокаивает нервную систему. Поэтому метод Вейла можно применять и в течение дня, если Вам необходимо быстро собраться с мыслями и снять стресс. Для повышения эффективности методики можете прибегнуть к помощи ароматерапии. Ароматы лаванды, мелиссы, бергамота, валерианы, пассифлоры помогут расслабиться и быстрее заснуть."
-            android:textSize="18dp"
-            />
-
-
+            android:text="Данная дыхательная техника быстрого засыпания практиковалась столетиями еще индийскими йогами, а впоследствии была изучена доктором Эндрю Вейлом. Кстати, метод 4–7–8 используют сотрудники американских спецслужб для быстрого восстановления сил в экстремальных условиях (ведь именно во сне происходит активное восстановление организма). Метод Вейла успокаивает нервную систему, уменьшает проявления стресса и тревожности.\nСуть метода:\nЗаймите удобную позу в постели. Сосредоточьтесь на своем дыхании на 10 – 15 секунд. Сделайте глубокий вдох через нос на 4 счета. Задержите дыхание на 7 секунд. Сделайте глубокий выдох ртом, растянув его на 8 секунд. Повторите технику 2 – 3 раза, Вы почувствуете, как сонная нега окутывает Ваше тело и сознание. В идеале необходимо, чтобы при выполнении техники кончик языка касался верхнего неба возле корней зубов. Но если добиться такого положения языка Вам сложно, опустите этот момент. Как работает техника? Стресс, ощущение беспокойства и тревоги повышают уровень адреналина в крови. В итоге учащается сердечный ритм, тогда как дыхание становится поверхностным. Задержка дыхания с последующим неторопливым выдохом приводит к замедлению сердечного ритма и нормализации дыхания. Кроме того, метод 4–7–8 помогает очистить разум от переживаний, ведь выполнение техники предполагает сосредоточение на дыхании и счете, а потому у Вас не будет возможности думать о дне прошедшем. Наконец, дыхание в монотонном цикличном ритме успокаивает нервную систему. Поэтому метод Вейла можно применять и в течение дня, если Вам необходимо быстро собраться с мыслями и снять стресс. Для повышения эффективности методики можете прибегнуть к помощи ароматерапии. Ароматы лаванды, мелиссы, бергамота, валерианы, пассифлоры помогут расслабиться и быстрее заснуть.
+        "
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.726" />
     </ScrollView>
 
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/radius"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <ImageButton
-            android:id="@+id/playButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="#00c4c0b7"
-            android:onClick="play"
-            app:srcCompat="@android:drawable/ic_media_play" />
-
-        <ImageButton
-            android:id="@+id/pauseButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="#00c4c0b7"
-            android:onClick="pause"
-            app:srcCompat="@android:drawable/ic_media_pause" />
-
-        <ImageButton
-            android:id="@+id/stopButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="@drawable/krest"
-            android:onClick="stop" />
-
-        <ImageButton
-            android:id="@+id/nextButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="#00c4c0b7"
-            android:onClick="next"
-            app:srcCompat="@android:drawable/ic_media_next" />
-
-    </LinearLayout>
-
-
-
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

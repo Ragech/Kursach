@@ -8,14 +8,6 @@
     android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/WordView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/logo"
@@ -38,11 +30,33 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/Word"
+        android:background="@drawable/light_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:gravity="center"
+        android:layout_marginHorizontal="20dp">
+        <TextView
+            android:paddingHorizontal="10dp"
+            android:id="@+id/WordView"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="fill_horizontal"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="@color/dark"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/logo"
+        android:layout_below="@+id/Word"
         android:layout_marginBottom="85dp">
         <LinearLayout
             android:layout_width="match_parent"
@@ -320,4 +334,7 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 import android.app.AlarmManager;
@@ -17,34 +18,37 @@ import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Locale;
-import com.example.playerjava.screens.main.MainActivityNotes;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
-
 import java.util.List;
-
+import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import com.example.playerjava.screens.main.MainActivityNotes;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    MediaPlayer mPlayer = null;
-    Button setAlarm;
-    ImageButton playButton, pauseButton, stopButton, nextButton;
-
     public List<Word> wordList;
     private TextView WordView;
     Timer myTimer = new Timer();
-    private TimerTask MyTimerTask;
-
+    MediaPlayer mPlayer = null;
+    Button setAlarm;
+    ImageButton playButton, pauseButton, stopButton, nextButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+
+        WordView = findViewById(R.id.WordView);
+        WordDatabase db = Room.databaseBuilder(getApplicationContext(),
+                WordDatabase.class, "word-database").allowMainThreadQueries().build();
+        //Word a = new Word("123"); // Слово для базы данных
+
+        //db.wordDao().insertAll(a); //Добавление слов в Базу данных
+        //db.wordDao().deleteAllWords(); //Удаление всех элементов базы данных
+        wordList=db.wordDao().getAllWords();
+        getWord();
 
         setAlarm = findViewById(R.id.alarm_button);
 
@@ -77,48 +81,14 @@ public class MainActivity extends AppCompatActivity {
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
         });
 
-         /*Запрос разрешения на показ окон поверх других приложений
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (!Settings.canDrawOverlays(this)) {
-                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                        Uri.parse("package:" + getPackageName()));
-                startActivity(intent);
-            }
-        }
-         */
-
-
-        WordView = findViewById(R.id.WordView);
-        WordDatabase db = Room.databaseBuilder(getApplicationContext(),
-                WordDatabase.class, "word-database").allowMainThreadQueries().build();
-        //Word a = new Word("Откажитесь от алкоголя. Он делает сон поверхностным, беспокойным, а также способствует появлению храпа."); // Слово для базы данных
-
-        //db.wordDao().insertAll(a); //Добавление слов в Базу данных
-        //db.wordDao().deleteAllWords(); //Удаление всех элементов базы данных
-        wordList=db.wordDao().getAllWords();
-        getWord();
-
-    }
-    private void getWord() {
-        myTimer.schedule(new TimerTask() {
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                for (final Word list : wordList) {
-                    final String wrd = list.fastMessage;
-                    final double rnd = Math.random() * 12;
-                    final int id = (int) Math.round(rnd);
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (id == list.uid) {
-                                WordView.setText(wrd);
-                            }
-                        }
-                    });
-                }
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MainActivityNotes.class);
+                MainActivity.this.startActivity(intent);
             }
-        }, 0, 5000);
-    }
+        });
 
 
         Button articles = findViewById(R.id.articles);
@@ -146,6 +116,28 @@ public class MainActivity extends AppCompatActivity {
         stopButton.setEnabled(false);
         nextButton.setEnabled(false);
     }
+
+    private void getWord() {
+        myTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                for (final Word list : wordList) {
+                    final String wrd = list.fastMessage;
+                    final double rnd = Math.random() * 11;
+                    final int id = (int) Math.round(rnd);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (id == list.uid) {
+                                WordView.setText(wrd);
+                            }
+                        }
+                    });
+                }
+            }
+        }, 0, 5000);
+    }
+
     private PendingIntent getAlarmInfoPendingIntent() {
         Intent alarmInfoIntent = new Intent(this, MainActivity.class);
         alarmInfoIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -159,12 +151,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void chooseSong() {
-        double r = Math.random() * 2;
+        double r = Math.random() * 6;
         int rr = (int) Math.round(r);
         switch (rr) {
             case 0: mPlayer = MediaPlayer.create(this, R.raw.first); break;
             case 1: mPlayer = MediaPlayer.create(this, R.raw.second); break;
             case 2: mPlayer = MediaPlayer.create(this, R.raw.third); break;
+            case 3: mPlayer = MediaPlayer.create(this, R.raw.fourth); break;
+            case 4: mPlayer = MediaPlayer.create(this, R.raw.fifth); break;
+            case 5: mPlayer = MediaPlayer.create(this, R.raw.sixth); break;
+            case 6: mPlayer = MediaPlayer.create(this, R.raw.seventh); break;
         }
     }
     private void stopPlay(){
