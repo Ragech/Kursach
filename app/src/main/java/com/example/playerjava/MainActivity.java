@@ -1,6 +1,7 @@
 package com.example.playerjava;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -18,6 +19,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 import com.example.playerjava.screens.main.MainActivityNotes;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
+
+import java.util.List;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
     MediaPlayer mPlayer = null;
     Button setAlarm;
     ImageButton playButton, pauseButton, stopButton, nextButton;
+
+    public List<Word> wordList;
+    private TextView WordView;
+    Timer myTimer = new Timer();
+    private TimerTask MyTimerTask;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,14 +87,38 @@ public class MainActivity extends AppCompatActivity {
         }
          */
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+
+        WordView = findViewById(R.id.WordView);
+        WordDatabase db = Room.databaseBuilder(getApplicationContext(),
+                WordDatabase.class, "word-database").allowMainThreadQueries().build();
+        //Word a = new Word("Откажитесь от алкоголя. Он делает сон поверхностным, беспокойным, а также способствует появлению храпа."); // Слово для базы данных
+
+        //db.wordDao().insertAll(a); //Добавление слов в Базу данных
+        //db.wordDao().deleteAllWords(); //Удаление всех элементов базы данных
+        wordList=db.wordDao().getAllWords();
+        getWord();
+
+    }
+    private void getWord() {
+        myTimer.schedule(new TimerTask() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivityNotes.class);
-                MainActivity.this.startActivity(intent);
+            public void run() {
+                for (final Word list : wordList) {
+                    final String wrd = list.fastMessage;
+                    final double rnd = Math.random() * 12;
+                    final int id = (int) Math.round(rnd);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (id == list.uid) {
+                                WordView.setText(wrd);
+                            }
+                        }
+                    });
+                }
             }
-        });
+        }, 0, 5000);
+    }
 
 
         Button articles = findViewById(R.id.articles);
