@@ -1,4 +1,4 @@
-package com.example.playerjava;
+package com.example.playerjava.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

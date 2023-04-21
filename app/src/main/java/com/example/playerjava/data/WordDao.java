@@ -1,8 +1,10 @@
-package com.example.playerjava;
+package com.example.playerjava.data;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+
+import com.example.playerjava.model.Word;
 
 import java.util.List;
 
@@ -12,7 +14,7 @@ public interface WordDao {
     @Insert
     void insertAll(Word... words);
 
-    @Query("DELETE FROM word")
+    @Query("DELETE FROM word WHERE uid > 12")
     void deleteAllWords();
 
     @Query("SELECT * FROM word")
