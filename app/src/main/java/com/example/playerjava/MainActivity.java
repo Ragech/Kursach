@@ -63,10 +63,13 @@ public class MainActivity extends AppCompatActivity {
         setAlarm = findViewById(R.id.alarm_button);
 
         setAlarm.setOnClickListener(v -> {
+            Calendar cal = Calendar.getInstance();
+            int currentMinute = cal.get(Calendar.MINUTE);
+            int currentHour = cal.get(Calendar.HOUR);
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
-                    .setHour(12)
-                    .setMinute(0)
+                    .setHour(currentHour)
+                    .setMinute(currentMinute)
                     .setTitleText("Выберите время для будильника")
                     .build();
 
