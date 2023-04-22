@@ -1,24 +1,28 @@
 package com.example.playerjava;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.Intent;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import com.example.playerjava.data.WordDatabase;
 import com.example.playerjava.model.Word;
+import com.example.playerjava.screens.main.MainActivityNotes;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
+
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
@@ -26,13 +30,12 @@ import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.example.playerjava.screens.main.MainActivityNotes;
-
 
 public class MainActivity extends AppCompatActivity {
 
     public List<Word> wordList;
     private TextView WordView;
+    private WordDatabase db;
     Timer myTimer = new Timer();
     MediaPlayer mPlayer = null;
     Button setAlarm;
@@ -44,25 +47,18 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
 
         WordView = findViewById(R.id.WordView);
-        WordDatabase db = Room.databaseBuilder(getApplicationContext(),
-                WordDatabase.class, "word-database").allowMainThreadQueries().build();
-        Word a = new Word("Откажитесь от алкоголя. Он делает сон поверхностным и беспокойным."); // Слово для базы данных
-        Word b = new Word("Перед сном ешьте рыбу, она способствует скорейшему засыпанию."); // Слово для базы данных
-        Word c = new Word("Не пейте кофе или чай перед сном."); // Слово для базы данных
-        Word d = new Word("Возьмите хорошую книгу. Чтение снижает уровень стресса."); // Слово для базы данных
-        Word e = new Word("Впустите в комнату свежий воздух."); // Слово для базы данных
-        Word f = new Word("Постарайтесь не зацикливаться на желании заснуть."); // Слово для базы данных
-        Word g = new Word("Обогатите рацион магнием. Он делает ваш сон крепче."); // Слово для базы данных
-        Word h = new Word("Ешьте на перекус орехи для нормализации работы нервной системы"); // Слово для базы данных
-        Word i = new Word("Спите на боку. Такая поза поможет быстрее уснуть."); // Слово для базы данных
-        Word j = new Word("Отложите гаджеты за полчаса до сна."); // Слово для базы данных
-        Word k = new Word("Создайте свой ритуал сна. Например, примите душ и почистить зубы."); // Слово для базы данных
-        Word l = new Word("Не смотрите на часы, когда не можете уснуть"); // Слово для базы данных
+        db = Room.databaseBuilder(getApplicationContext(),
+                        WordDatabase.class, "wordDatabase")
+                .createFromAsset("word-database.db").allowMainThreadQueries()
+                .build();
 
-        db.wordDao().insertAll(a,b,c,d,e,f,g,h,i,j,k,l); //Добавление слов в Базу данных
-        db.wordDao().deleteAllWords(); //Удаление всех элементов базы данных после 12
-        wordList=db.wordDao().getAllWords();
+        //Word a = new Word("123"); // Слово для базы данных
+        //db.wordDao().insertAll(a); //Добавление слов в Базу данных
+        //db.wordDao().deleteAllExtraWords(); //Удаление всех элементов базы данных после 12
+
+        wordList = db.wordDao().getAllWords();
         getWord();
+
 
         setAlarm = findViewById(R.id.alarm_button);
 
@@ -138,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 for (final Word list : wordList) {
                     final String wrd = list.fastMessage;
                     final double rnd = Math.random() * 11;
-                    final int id = (int) Math.round(rnd);
+                    final int id = (int) Math.round(rnd) + 1;
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {

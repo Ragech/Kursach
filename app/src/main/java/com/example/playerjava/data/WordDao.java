@@ -15,7 +15,7 @@ public interface WordDao {
     void insertAll(Word... words);
 
     @Query("DELETE FROM word WHERE uid > 12")
-    void deleteAllWords();
+    void deleteAllExtraWords();
 
     @Query("SELECT * FROM word")
     List<Word> getAllWords();
