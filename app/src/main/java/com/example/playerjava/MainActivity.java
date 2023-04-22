@@ -1,27 +1,42 @@
 package com.example.playerjava;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
-import android.content.Intent;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
+import com.example.playerjava.data.WordDatabase;
+import com.example.playerjava.model.Word;
+import com.example.playerjava.screens.main.MainActivityNotes;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
+
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
-import com.example.playerjava.screens.main.MainActivityNotes;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    public List<Word> wordList;
+    private TextView WordView;
+    private WordDatabase db;
+    Timer myTimer = new Timer();
     MediaPlayer mPlayer = null;
     Button setAlarm;
     ImageButton playButton, pauseButton, stopButton, nextButton;
@@ -30,6 +45,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+
+        WordView = findViewById(R.id.WordView);
+        db = Room.databaseBuilder(getApplicationContext(),
+                        WordDatabase.class, "wordDatabase")
+                .createFromAsset("word-database.db").allowMainThreadQueries()
+                .build();
+
+        //Word a = new Word("123"); // Слово для базы данных
+        //db.wordDao().insertAll(a); //Добавление слов в Базу данных
+        //db.wordDao().deleteAllExtraWords(); //Удаление всех элементов базы данных после 12
+
+        wordList = db.wordDao().getAllWords();
+        getWord();
+
 
         setAlarm = findViewById(R.id.alarm_button);
 
@@ -97,6 +126,28 @@ public class MainActivity extends AppCompatActivity {
         stopButton.setEnabled(false);
         nextButton.setEnabled(false);
     }
+
+    private void getWord() {
+        myTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                for (final Word list : wordList) {
+                    final String wrd = list.fastMessage;
+                    final double rnd = Math.random() * 11;
+                    final int id = (int) Math.round(rnd) + 1;
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (id == list.uid) {
+                                WordView.setText(wrd);
+                            }
+                        }
+                    });
+                }
+            }
+        }, 0, 5000);
+    }
+
     private PendingIntent getAlarmInfoPendingIntent() {
         Intent alarmInfoIntent = new Intent(this, MainActivity.class);
         alarmInfoIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -110,12 +161,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void chooseSong() {
-        double r = Math.random() * 2;
+        double r = Math.random() * 6;
         int rr = (int) Math.round(r);
         switch (rr) {
             case 0: mPlayer = MediaPlayer.create(this, R.raw.first); break;
             case 1: mPlayer = MediaPlayer.create(this, R.raw.second); break;
             case 2: mPlayer = MediaPlayer.create(this, R.raw.third); break;
+            case 3: mPlayer = MediaPlayer.create(this, R.raw.fourth); break;
+            case 4: mPlayer = MediaPlayer.create(this, R.raw.fifth); break;
+            case 5: mPlayer = MediaPlayer.create(this, R.raw.sixth); break;
+            case 6: mPlayer = MediaPlayer.create(this, R.raw.seventh); break;
         }
     }
     private void stopPlay(){

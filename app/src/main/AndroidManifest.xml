@@ -36,11 +36,7 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".AddActivity"/>
         <activity android:name=".MainActivityArticles"/>
-        <receiver android:name=".AlarmReceiver"/>
-        <service android:name=".Music"
-            android:enabled="true"/>
     </application>
 
 

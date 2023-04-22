@@ -7,6 +7,8 @@
     android:background="@color/bg"
     android:orientation="vertical">
 
+
+
     <LinearLayout
         android:id="@+id/logo"
         android:layout_width="match_parent"
@@ -28,11 +30,34 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/Word"
+        android:background="@drawable/light_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:gravity="center"
+        android:layout_marginHorizontal="20dp">
+        <TextView
+            android:paddingHorizontal="10dp"
+            android:id="@+id/WordView"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="fill_horizontal"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="@color/dark"
+            android:paddingVertical="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/logo"
+        android:layout_below="@+id/Word"
         android:layout_marginBottom="85dp">
         <LinearLayout
             android:layout_width="match_parent"
@@ -249,7 +274,7 @@
                         android:layout_width="155dp"
                         android:layout_height="40dp"
                         app:backgroundTint="@null"
-                        android:background="@drawable/radius"
+                        android:background="@drawable/dark_button"
                         android:paddingHorizontal="25dp"
                         android:text="Создать"
                         android:textColor="#dedddc"/>
