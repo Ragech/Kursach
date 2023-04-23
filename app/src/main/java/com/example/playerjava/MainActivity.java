@@ -5,8 +5,11 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -65,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         setAlarm.setOnClickListener(v -> {
             Calendar cal = Calendar.getInstance();
             int currentMinute = cal.get(Calendar.MINUTE);
-            int currentHour = cal.get(Calendar.HOUR);
+            int currentHour = cal.get(Calendar.HOUR_OF_DAY);
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
                     .setHour(currentHour)
@@ -94,14 +97,15 @@ public class MainActivity extends AppCompatActivity {
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
         });
 
-        /* Если не работает будильник в android 10, нужно запросить разрешение на показ окон поверх других приложений
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (!Settings.canDrawOverlays(this)) {
-                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                        Uri.parse("package:" + getPackageName()));
-                startActivity(intent);
-            }
+        // Если не работает будильник в android 10, нужно запросить разрешение на показ окон поверх других приложений
+        /*if (!Settings.canDrawOverlays(this)) {
+            Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    Uri.parse("package:" + getPackageName()));
+            startActivity(intent);
         }*/
+
+
+
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,6 +140,11 @@ public class MainActivity extends AppCompatActivity {
         pauseButton.setEnabled(false);
         stopButton.setEnabled(false);
         nextButton.setEnabled(false);
+    }
+
+
+    @Override
+    public void onBackPressed() {
     }
 
     private void getWord() {

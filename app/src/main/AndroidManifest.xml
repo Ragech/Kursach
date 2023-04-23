@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
         android:allowBackup="true"
@@ -47,6 +48,7 @@
         <activity android:name=".articles.Articl8"/>
         <activity android:name=".articles.Articl9"/>
         <activity android:name=".articles.Articl10"/>
+
     </application>
 
 
