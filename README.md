@@ -11,10 +11,12 @@
   </h2>
 </p>
 
-<p align="start">
+<p display="flex">
+  <p align="start">
    <img src="img/screen.jpg" alt="Logo" width="200">
 </p>
 
 <p align="end">
-   <img src="img/s1.png" alt="Logo" width="200">
+   <img src="img/s1.png" alt="Logo" width="400">
+</p>
 </p>
