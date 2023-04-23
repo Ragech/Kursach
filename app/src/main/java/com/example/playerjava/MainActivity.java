@@ -94,6 +94,16 @@ public class MainActivity extends AppCompatActivity {
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
         });
 
+        /* Если не работает будильник в android 10, нужно запросить разрешение на показ окон поверх других приложений
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.canDrawOverlays(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:" + getPackageName()));
+                startActivity(intent);
+            }
+        }
+         */
+        
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
