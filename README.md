@@ -11,6 +11,6 @@
   </h2>
 </p>
 
-<p align="center">
+<p align="start">
    <img src="img/screen.jpg" alt="Logo" width="200">
 </p>
