@@ -8,334 +8,697 @@
     android:orientation="vertical">
 
 
-
     <LinearLayout
-        android:id="@+id/logo"
+        android:id="@+id/somnolog_bar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        android:layout_alignParentTop="true"
-        android:alpha="1"
-        android:background="#00c4c0b7"
-        android:gravity="center"
+        android:background="@color/dark"
         android:orientation="horizontal"
-        android:paddingVertical="10dp">
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/logo2" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="5dp"
-        android:id="@+id/Word"
-        android:background="@drawable/light_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
-        android:gravity="center"
-        android:layout_marginHorizontal="20dp">
+        android:gravity="center">
         <TextView
-            android:paddingHorizontal="10dp"
-            android:id="@+id/WordView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="Сомнолог"
             android:textStyle="bold"
-            android:textSize="16dp"
-            android:textColor="@color/dark"
-            android:paddingVertical="5dp"/>
+            android:textSize="24dp"
+            android:textColor="@color/bg"/>
     </LinearLayout>
 
-    <LinearLayout
+
+
+    <ScrollView
         android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/Word"
-        android:layout_marginBottom="85dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="20dp"
-            android:paddingBottom="10dp"
-            android:layout_gravity="center">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:background="@drawable/radius"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
-                    <LinearLayout
-                        android:layout_gravity="start"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="15dp"
-                        android:layout_weight="2">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Сомнолог"
-                            android:textColor="@color/white"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-
-                            android:layout_marginTop="7dp"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Путь в твой крепкий сон..."
-                            android:textColor="@color/white"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_gravity="bottom"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="15dp">
-
-                        <ImageView
-                            android:layout_width="68dp"
-                            android:layout_height="42dp"
-
-                            app:srcCompat="@drawable/somnolog" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="30dp">
-
-                    <Button
-                        android:id="@+id/articles"
-                        android:layout_width="155dp"
-                        android:layout_height="40dp"
-                        app:backgroundTint="@null"
-                        android:background="@drawable/light_button"
-                        android:paddingHorizontal="25dp"
-                        android:text="Советы дня"
-                        android:textColor="@color/dark"/>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
+        android:layout_below="@+id/somnolog_bar"
+        android:layout_marginBottom="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="20dp"
-            android:paddingBottom="10dp"
-            android:layout_gravity="center">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:background="@drawable/radius"
-                android:orientation="vertical">
-
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="10dp">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:layout_height="160dp"
+                    android:background="@drawable/light_block"
+                    android:orientation="vertical">
+
                     <LinearLayout
-                        android:layout_gravity="start"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="15dp"
-                        android:layout_weight="2">
-                        <TextView
-                            android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Список дел"
-                            android:textColor="@color/white"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='Метод "дыхания сна"'
+                                android:textColor="#44403c"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
 
-                            android:layout_marginTop="7dp"/>
+                                android:layout_marginTop="7dp"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Не забудь все самое важное..."
-                            android:textColor="@color/white"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="15dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Самое главное - это сон..."
+                                android:textColor="#44403c"
+                                android:textSize="14sp" />
+                        </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            app:srcCompat="@drawable/plan" />
                     </LinearLayout>
 
-                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="30dp">
+                        <Button
+                            android:id="@+id/articl1"
+                            android:layout_width="155dp"
+                            android:layout_height="40dp"
+                            app:backgroundTint="@null"
 
-                    <Button
-                        android:id="@+id/button"
-                        android:layout_width="155dp"
-                        android:layout_height="40dp"
-                        app:backgroundTint="@null"
-                        android:background="@drawable/light_button"
+                        android:background="@drawable/radius"
+
                         android:paddingHorizontal="25dp"
-                        android:text="Создать"
-                        android:textColor="@color/dark"/>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="20dp"
-            android:paddingBottom="10dp"
-            android:layout_gravity="center">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:background="@drawable/light_block"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
-                    <LinearLayout
-                        android:layout_gravity="start"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="15dp"
-                        android:layout_weight="2">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Будильник"
-                            android:textColor="#44403c"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-
-                            android:layout_marginTop="7dp"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Самое главное - это сон..."
-                            android:textColor="#44403c"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="15dp">
-
-                        <ImageView
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            app:srcCompat="@drawable/clock_icon" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="30dp">
-
-                    <Button
-                        android:id="@+id/alarm_button"
-                        android:layout_width="155dp"
-                        android:layout_height="40dp"
-                        app:backgroundTint="@null"
-                        android:background="@drawable/dark_button"
-                        android:paddingHorizontal="25dp"
-                        android:text="Создать"
+                        android:text="Подробнее"
                         android:textColor="#dedddc"/>
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/light_block"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='Метод "4-7-8"'
+                                android:textColor="#44403c"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+
+                                android:layout_marginTop="7dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Самое главное - это сон..."
+                                android:textColor="#44403c"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <Button
+                            android:id="@+id/articl2"
+                            android:layout_width="155dp"
+                            android:layout_height="40dp"
+                            app:backgroundTint="@null"
+                            android:background="@drawable/radius"
+
+                            android:paddingHorizontal="25dp"
+                            android:text="Подробнее"
+                            android:textColor="#dedddc"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/light_block"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='Метод "каменная статуя"'
+                                android:textColor="#44403c"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+
+                                android:layout_marginTop="7dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Самое главное - это сон..."
+                                android:textColor="#44403c"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <Button
+                            android:id="@+id/articl3"
+                            android:layout_width="155dp"
+                            android:layout_height="40dp"
+                            app:backgroundTint="@null"
+
+                            android:background="@drawable/radius"
+                            android:paddingHorizontal="25dp"
+                            android:text="Подробнее"
+                            android:textColor="#dedddc"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/light_block"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='Метод "Суворова"'
+                                android:textColor="#44403c"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+
+                                android:layout_marginTop="7dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Самое главное - это сон..."
+                                android:textColor="#44403c"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <Button
+                            android:id="@+id/articl4"
+                            android:layout_width="155dp"
+                            android:layout_height="40dp"
+                            app:backgroundTint="@null"
+
+                            android:background="@drawable/radius"
+                            android:paddingHorizontal="25dp"
+                            android:text="Подробнее"
+                            android:textColor="#dedddc"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/light_block"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='Метод "пляж"'
+                                android:textColor="#44403c"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+
+                                android:layout_marginTop="7dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Самое главное - это сон..."
+                                android:textColor="#44403c"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <Button
+                            android:id="@+id/articl5"
+                            android:layout_width="155dp"
+                            android:layout_height="40dp"
+                            app:backgroundTint="@null"
+
+                            android:background="@drawable/radius"
+                            android:paddingHorizontal="25dp"
+                            android:text="Подробнее"
+                            android:textColor="#dedddc"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/light_block"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='Метод "Бада Уинтера"'
+                                android:textColor="#44403c"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+
+                                android:layout_marginTop="7dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Самое главное - это сон..."
+                                android:textColor="#44403c"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <Button
+                            android:id="@+id/articl6"
+                            android:layout_width="155dp"
+                            android:layout_height="40dp"
+                            app:backgroundTint="@null"
+
+                            android:background="@drawable/dark_button"
+
+                            android:paddingHorizontal="25dp"
+                            android:text="Подробнее"
+                            android:textColor="#dedddc"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/light_block"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='Метод "цветовой гаммы"'
+                                android:textColor="#44403c"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+
+                                android:layout_marginTop="7dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Самое главное - это сон..."
+                                android:textColor="#44403c"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <Button
+                            android:id="@+id/articl7"
+                            android:layout_width="155dp"
+                            android:layout_height="40dp"
+                            app:backgroundTint="@null"
+
+                            android:background="@drawable/radius"
+
+                            android:paddingHorizontal="25dp"
+                            android:text="Подробнее"
+                            android:textColor="#dedddc"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/light_block"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='Визуализация дня'
+                                android:textColor="#44403c"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+
+                                android:layout_marginTop="7dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Самое главное - это сон..."
+                                android:textColor="#44403c"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <Button
+                            android:id="@+id/articl8"
+                            android:layout_width="155dp"
+                            android:layout_height="40dp"
+                            app:backgroundTint="@null"
+
+                        android:background="@drawable/radius"
+
+                        android:paddingHorizontal="25dp"
+                        android:text="Подробнее"
+                        android:textColor="#dedddc"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/light_block"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='Метод "дыхание ушами"'
+                                android:textColor="#44403c"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+
+                                android:layout_marginTop="7dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Самое главное - это сон..."
+                                android:textColor="#44403c"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <Button
+                            android:id="@+id/articl9"
+                            android:layout_width="155dp"
+                            android:layout_height="40dp"
+                            app:backgroundTint="@null"
+
+                        android:background="@drawable/radius"
+
+                        android:paddingHorizontal="25dp"
+                        android:text="Подробнее"
+                        android:textColor="#dedddc"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/light_block"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='Небольшие методы'
+                                android:textColor="#44403c"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+
+                                android:layout_marginTop="7dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Самое главное - это сон..."
+                                android:textColor="#44403c"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <Button
+                            android:id="@+id/articl10"
+                            android:layout_width="155dp"
+                            android:layout_height="40dp"
+                            app:backgroundTint="@null"
+                        android:background="@drawable/radius"
+
+                        android:paddingHorizontal="25dp"
+                        android:text="Подробнее"
+                        android:textColor="#dedddc"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </LinearLayout>
-    </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/radius"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <ImageButton
-            android:id="@+id/playButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="#00c4c0b7"
-            android:onClick="play"
-            app:srcCompat="@android:drawable/ic_media_play" />
-
-        <ImageButton
-            android:id="@+id/pauseButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="#00c4c0b7"
-            android:onClick="pause"
-            app:srcCompat="@android:drawable/ic_media_pause" />
-
-        <ImageButton
-            android:id="@+id/stopButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="@drawable/krest"
-            android:onClick="stop" />
-
-        <ImageButton
-            android:id="@+id/nextButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="#00c4c0b7"
-            android:onClick="next"
-            app:srcCompat="@android:drawable/ic_media_next" />
-
-    </LinearLayout>
-
-
-
+    </ScrollView>
 
 </RelativeLayout>
+
+
+
