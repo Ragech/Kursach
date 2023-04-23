@@ -63,10 +63,13 @@ public class MainActivity extends AppCompatActivity {
         setAlarm = findViewById(R.id.alarm_button);
 
         setAlarm.setOnClickListener(v -> {
+            Calendar cal = Calendar.getInstance();
+            int currentMinute = cal.get(Calendar.MINUTE);
+            int currentHour = cal.get(Calendar.HOUR);
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
-                    .setHour(12)
-                    .setMinute(0)
+                    .setHour(currentHour)
+                    .setMinute(currentMinute)
                     .setTitleText("Выберите время для будильника")
                     .build();
 
@@ -91,6 +94,14 @@ public class MainActivity extends AppCompatActivity {
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
         });
 
+        /* Если не работает будильник в android 10, нужно запросить разрешение на показ окон поверх других приложений
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.canDrawOverlays(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:" + getPackageName()));
+                startActivity(intent);
+            }
+        }*/
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

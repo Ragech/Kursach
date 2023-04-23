@@ -48,7 +48,8 @@
             android:gravity="fill_horizontal"
             android:textStyle="bold"
             android:textSize="16dp"
-            android:textColor="@color/dark"/>
+            android:textColor="@color/dark"
+            android:paddingVertical="5dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -273,7 +274,7 @@
                         android:layout_width="155dp"
                         android:layout_height="40dp"
                         app:backgroundTint="@null"
-                        android:background="@drawable/radius"
+                        android:background="@drawable/dark_button"
                         android:paddingHorizontal="25dp"
                         android:text="Создать"
                         android:textColor="#dedddc"/>

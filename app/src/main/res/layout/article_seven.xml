@@ -1,40 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textzagol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Метод &quot;Цветовая гамма&quot;"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.019" />
 
-    <ScrollView
-        android:layout_width="382dp"
-        android:layout_height="666dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textzagol"
-        tools:layout_editor_absoluteX="9dp">
-
+    <LinearLayout
+        android:id="@+id/somnolog_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark"
+        android:orientation="horizontal"
+        android:gravity="center">
         <TextView
-            android:id="@+id/textosn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Задача данной методики ментального расслабления – перевести наш мозг за короткий промежуток времени в альфа-состояние посредством чередования цветов. Что представляет собой это самое &quot;альфа-состояние&quot;?\n Наш главный компьютер (то есть головной мозг) имеет 4 положения переключения: бета, альфа, тета и дельта. Когда мы управляем своим сознанием, мозг пребывает в состоянии бета. В режиме тета и дельта наш мозг функционирует во время фаз так называемого &quot;глубокого сна&quot;. А вот переход от бодрствования ко сну, то есть период засыпания, и называется альфа-состоянием. Как быстро войти в это состояние? Дайте себе следующую установку: как только Вы дойдете, спускаясь вниз, до голубого цвета (а это и есть альфа-состояние), будете готовы уснуть. Закройте глаза, визуализируйте желтый цвет и проговорите фразу:\n &quot;Я иду к желтому цвету&quot;. Теперь представьте красный цвет и идите к нему, пока он не всплывет перед Вашим взором. При этом проговорите фразу:\n &quot;Я иду к красному цвету&quot;. Переходите к следующему цвету, повторяя описанный выше алгоритм действий. Визуализируйте минимум 6 – 7 цветов, пока не дойдете до последнего – голубого, который следует задержать в воображении максимально долго. Такая техника помогает расслабиться, забыть о треволнениях прошедшего дня и погрузиться в глубокий сон."          android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.726" />
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text='Метод "цветовой гаммы"'
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/bg"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/somnolog_bar"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:text="Задача данной методики ментального расслабления – перевести наш мозг за короткий промежуток времени в альфа-состояние посредством чередования цветов. Что представляет собой это самое &quot;альфа-состояние&quot;?\n Наш главный компьютер (то есть головной мозг) имеет 4 положения переключения: бета, альфа, тета и дельта. Когда мы управляем своим сознанием, мозг пребывает в состоянии бета. В режиме тета и дельта наш мозг функционирует во время фаз так называемого &quot;глубокого сна&quot;. А вот переход от бодрствования ко сну, то есть период засыпания, и называется альфа-состоянием. Как быстро войти в это состояние? Дайте себе следующую установку: как только Вы дойдете, спускаясь вниз, до голубого цвета (а это и есть альфа-состояние), будете готовы уснуть. Закройте глаза, визуализируйте желтый цвет и проговорите фразу:\n &quot;Я иду к желтому цвету&quot;. Теперь представьте красный цвет и идите к нему, пока он не всплывет перед Вашим взором. При этом проговорите фразу:\n &quot;Я иду к красному цвету&quot;. Переходите к следующему цвету, повторяя описанный выше алгоритм действий. Визуализируйте минимум 6 – 7 цветов, пока не дойдете до последнего – голубого, который следует задержать в воображении максимально долго. Такая техника помогает расслабиться, забыть о треволнениях прошедшего дня и погрузиться в глубокий сон."
+            android:textSize="18dp"
+            />
+
+
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

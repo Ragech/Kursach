@@ -36,11 +36,17 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".AddActivity"/>
         <activity android:name=".MainActivityArticles"/>
-        <receiver android:name=".AlarmReceiver"/>
-        <service android:name=".Music"
-            android:enabled="true"/>
+        <activity android:name=".articles.Articl1"/>
+        <activity android:name=".articles.Articl2"/>
+        <activity android:name=".articles.Articl3"/>
+        <activity android:name=".articles.Articl4"/>
+        <activity android:name=".articles.Articl5"/>
+        <activity android:name=".articles.Articl6"/>
+        <activity android:name=".articles.Articl7"/>
+        <activity android:name=".articles.Articl8"/>
+        <activity android:name=".articles.Articl9"/>
+        <activity android:name=".articles.Articl10"/>
     </application>
 
 

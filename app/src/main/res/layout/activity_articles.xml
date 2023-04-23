@@ -34,7 +34,7 @@
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:layout_below="@+id/somnolog_bar"
-        android:layout_marginBottom="85dp">
+        android:layout_marginBottom="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "4-7-8"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -194,7 +194,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "каменная статуя"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -257,7 +257,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "Суворова"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -320,7 +320,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "пляж"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -383,7 +383,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "Бада Уинтера"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -446,7 +446,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "цветовой гаммы"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -507,7 +507,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Визуализация дня'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -569,7 +569,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Метод "дыхание ушами"'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -631,7 +631,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text='Метод "дыхания сна"'
+                                android:text='Небольшие методы'
                                 android:textColor="#44403c"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -681,63 +681,7 @@
 
         </LinearLayout>
 
-        </ScrollView>
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/radius"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <ImageButton
-            android:id="@+id/playButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="#00c4c0b7"
-            android:onClick="play"
-            app:srcCompat="@android:drawable/ic_media_play" />
-
-        <ImageButton
-            android:id="@+id/pauseButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="#00c4c0b7"
-            android:onClick="pause"
-            app:srcCompat="@android:drawable/ic_media_pause" />
-
-        <ImageButton
-            android:id="@+id/stopButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="@drawable/krest"
-            android:onClick="stop" />
-
-        <ImageButton
-            android:id="@+id/nextButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="#00c4c0b7"
-            android:onClick="next"
-            app:srcCompat="@android:drawable/ic_media_next" />
-
-    </LinearLayout>
-
-
+    </ScrollView>
 
 
 
