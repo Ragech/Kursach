@@ -4,9 +4,9 @@
     <img src="img/logo2.png" alt="Logo" height="60px">
   </a>
 
-  <p align="center">
+  <h1 align="center">
     Sunmoon - помощник вашего сна
     <br/>
     <br/>
-  </p>
+  </h1>
 </p>
