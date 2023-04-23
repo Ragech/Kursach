@@ -12,5 +12,5 @@
 </p>
 
 <p align="center">
-   <img src="img/screen.jpg" alt="Logo">
+   <img src="img/screen.jpg" alt="Logo" width="100">
 </p>
