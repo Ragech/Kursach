@@ -142,6 +142,13 @@ public class MainActivity extends AppCompatActivity {
         nextButton.setEnabled(false);
     }
 
+
+    @Override
+    public void onBackPressed() {
+        // super.onBackPressed();
+        // ваш код
+    }
+
     private void getWord() {
         myTimer.schedule(new TimerTask() {
             @Override

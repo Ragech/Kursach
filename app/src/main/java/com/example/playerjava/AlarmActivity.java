@@ -99,10 +99,6 @@ public class AlarmActivity extends AppCompatActivity {
         // super.onBackPressed();
         // ваш код
     }
-    @Override
-    protected void onUserLeaveHint() {
-
-    }
 
     @Override
     protected void onDestroy() {
