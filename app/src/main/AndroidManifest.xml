@@ -48,6 +48,7 @@
         <activity android:name=".articles.Articl8"/>
         <activity android:name=".articles.Articl9"/>
         <activity android:name=".articles.Articl10"/>
+
     </application>
 
 

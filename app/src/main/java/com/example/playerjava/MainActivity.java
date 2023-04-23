@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         setAlarm.setOnClickListener(v -> {
             Calendar cal = Calendar.getInstance();
             int currentMinute = cal.get(Calendar.MINUTE);
-            int currentHour = cal.get(Calendar.HOUR);
+            int currentHour = cal.get(Calendar.HOUR_OF_DAY);
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
                     .setHour(currentHour)
@@ -145,8 +145,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        // super.onBackPressed();
-        // ваш код
     }
 
     private void getWord() {
