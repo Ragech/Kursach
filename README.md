@@ -14,3 +14,7 @@
 <p align="start">
    <img src="img/screen.jpg" alt="Logo" width="200">
 </p>
+
+<p align="end">
+   <img src="img/s1.png" alt="Logo" width="200">
+</p>
