@@ -12,7 +12,7 @@
 </p>
 
 
-<p align="center" margin-top="40px">
+<p align="center" top="30px">
  <img src="img/screen.jpg" height="300px">  <img src="img/s4.png" height="300px"> 
 
 
