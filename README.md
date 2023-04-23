@@ -1,7 +1,1 @@
-<style>
-   h1 { 
-    background-color: #dedddc; 
-   }
-  </style>
-
-<h1 align="center">Sunmoon</h1>
+<h1 align="center" style="background-color: #dedddc;">Sunmoon</h1>
