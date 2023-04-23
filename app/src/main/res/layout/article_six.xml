@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/somnolog_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text='Метод "Бада Уинтера"'
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/bg"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/somnolog_bar"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:text=" Если вариант с песком Вам не по душе, предлагаем расслабиться ментально по одному из методов спортивного тренера Бада Уинтера, описанных в книге &quot;Relax and Win: Championship Performance&quot;:\n1. Представьте, что лежите в лодке, плывущей по озеру. Перед Вами лишь чистое голубое небо над головой. Вас убаюкивает легкое покачивание лодки и плеск волн за кормой.\n2. Если Вы не боитесь темноты, и у Вас нет клаустрофобии, представьте, что лежите в черном бархатном гамаке в абсолютно темной комнате.\n3. Не хотите включать фантазию? Тогда просто закройте глаза и повторяйте на протяжении 10 секунд одну и ту же фразу: &quot;не думай&quot;.\n Важно, чтобы непосредственно перед релаксацией были расслаблены поочередно все мышцы тела: от лицевых и вплоть до ступней. На то, чтобы отработать данную методику, может уйти несколько недель, но в результате Вы научитесь засыпать за 2 минуты."
+            android:textSize="18dp"
+            />
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

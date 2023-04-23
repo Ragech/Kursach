@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/somnolog_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text='Метод "пляж"'
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/bg"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/somnolog_bar"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:text="За 1 минуту, практикуя это упражнение, Вы не заснете, а вот за 5 минут точно ощутите сильную сонливость.\n
+    Техника выполнения упражнения:\n
+    1. Лягте на спину, свободно раскинув ноги и руки.\n
+    2. Накройтесь одеялом либо простыней (открытой должна остаться только голова).\n
+    3. Представьте, что Вы находитесь на безлюдном песчаном пляже, и теплый песок согревает Ваше тело.\n
+    4. Песок сыпется на Вашу правую кисть и совсем скоро покрывает всю руку от запястья до плеча. Ваша правая рука под весом теплого песка становится тяжелой.\n
+    5. Теперь теплый песок медленно присыпает Вашу левую руку, которая также тяжелеет.\n
+    6. Приходит черед ног: сначала песок от ступни до бедра покрывает правую ногу, а затем и левую. Ноги становятся тяжелыми и теплыми.\n
+    7. Песок добрался до низа живота, боков, груди и шеи, при этом Вы не должны ощущать, что песок давит Вам на грудь и затрудняет дыхание.\n
+    8. Лицо приятно согревают лучи летнего солнца. При этом Вы не испытываете удушающей жары, ведь Ваше лицо обдувается легким ветерком.\n
+    9. Лоб расслаблен. Когда тело полностью погрузится в песок, Вы обязательно почувствуете расслабление и сонливость."
+            android:textSize="18dp"
+            />
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

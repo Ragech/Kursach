@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/somnolog_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text='Метод "дыхание ушами"'
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/bg"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/somnolog_bar"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:text="Эта дыхательная техника быстрого засыпания потребует включить воображение. Она позволяет расслабить все тело и сознание. После каждого вдоха и выдоха следует задерживать дыхание на 2-3 секунды. Лежа на спине с прямыми ногами, слегка разведите их в стороны. Немного разведите руки. Представьте, что лежите на песке на берегу моря. Дышите медленно и легко:\n 1. Сделайте медленный вдох, почувствуйте, как воздух, проникая через правое ухо, расходится по всему телу.\n 2. Медленно выдыхая, представьте, что воздух выходит сквозь правую руку из ладони.\n 3. На следующем вдохе воздух снова заходит через правое ухо.\n 4. На выдохе воздух проходит сквозь правую ногу и выходит через стопу.\n 5. Третий вдох снова через правое ухо.\n 6. Пройдя через все тело, воздух выходит по левой ноге через стопу.\n 7. Медленный вдох снова через правое ухо.\n 8. На выдохе воздух проходит сквозь левую руку и выходит через ладонь.\n 9. Вдох через правое ухо.\n 10. Выдох через левое ухо.\nЗатем повторите всю последовательность для противоположных частей тела:\n 1. Вдох через левое ухо.\n 2. Выдох через левую ладонь.\n 3. Вдох через левое ухо.\n 4. Выдох через левую стопу.\n 5. Вдох через левое ухо.\n 6. Выдох через правую ногу и стопу.\n 7. Вдох через левое ухо.\n 8. Выдох через правую руку и ладонь.\n 9. Вдох через левое ухо.\n 10. Выдох через правое ухо.\n Вначале, возможно, потребуется повторить упражнение несколько раз. Со временем вы начнете засыпать уже на первом цикле. Как только почувствуете, что засыпаете, можно принять обычное положение тела для сна."
+            android:textSize="18dp"
+            />
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

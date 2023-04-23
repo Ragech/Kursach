@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/somnolog_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text='Визуализация дня'
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/bg"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/somnolog_bar"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:text="Воспроизведите в памяти все события сегодняшнего дня. Вспомните в подробностях все, что происходило с самого утра, в последовательности, до самого вечера. Важно при этом не окрашивать воспоминания эмоциями и не оценивать свои или чужие поступки. Представьте, что вы являетесь сторонним наблюдателем, словно просматриваете киноленту. Мозг, сосредоточившись на воспоминаниях, отвлечется от волнений и тревог, и, скорее всего, вы уснете, успев вспомнить лишь половину дня. Напряжение и расслабление мышц Тревожные мысли и волнения неосознанно заставляют наше тело находиться в напряжении. Поэтому можно сначала заставить расслабиться тело, а затем релаксация неизбежно передастся и мозгу.\n Суть упражнения заключается в поочередном напряжении и расслаблении мышц тела снизу вверх. Сначала напрягите и расслабьте пальцы ног, затем мышцы ступней, голени, бедра - пока не дойдете до шеи. Мышцы не следует сокращать со всей силы - напряжение должно быть легким, а расслабление - максимальным. Старайтесь при этом ни о чем не думать. Технику напряжения и расслабления мышц можно совместить с подсчетами, что поможет отключить мысли: слегка сожмите одну руку в кулак, затем расслабьте. Через несколько секунд повторите это с другой рукой. Поочередно сжимайте руки, при этом считая каждое напряжение.\n Этот метод улучшает память, а также помогает вам быстро уснуть."
+            android:textSize="18dp"/>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

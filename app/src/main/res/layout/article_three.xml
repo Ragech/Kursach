@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/somnolog_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text='Метод "каменная статуя"'
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/bg"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/somnolog_bar"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:text="Данная методика засыпания может показаться странной, но от этого она не становится менее результативной. Выполнение техники: \n1. Создайте в помещении абсолютную тишину. \n2. Выключите свет. \n3. Сконцентрируйте все свои ощущения на ногах: Ваши ступни становятся тяжелыми и каменеют. Вы хотите подняться с постели, но не можете, так как тело сковала приятная усталость. \n4. Переходите от ног к торсу, рукам, голове, продолжая окаменевать. \n5. Если после того, как Ваше тело полностью обездвижено, Вы еще бодрствуете, продолжайте удерживать ощущения неподвижности, при этом важно в этот момент ни о чем не думать. \nВозможно, с первого раза данная техника не принесет желаемого результата, но со временем Вы обязательно научитесь контролировать свое тело и засыпать за одну минуту."
+            android:textSize="18dp"
+            />
+
+
+    </ScrollView>
+
+</RelativeLayout>
