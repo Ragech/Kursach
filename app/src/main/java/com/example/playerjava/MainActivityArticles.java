@@ -11,6 +11,18 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.playerjava.articles.Articl1;
+import com.example.playerjava.articles.Articl10;
+import com.example.playerjava.articles.Articl2;
+import com.example.playerjava.articles.Articl3;
+import com.example.playerjava.articles.Articl4;
+import com.example.playerjava.articles.Articl5;
+import com.example.playerjava.articles.Articl6;
+import com.example.playerjava.articles.Articl7;
+import com.example.playerjava.articles.Articl8;
+import com.example.playerjava.articles.Articl9;
+import com.example.playerjava.screens.main.MainActivityNotes;
+
 
 public class MainActivityArticles extends AppCompatActivity {
 
@@ -24,37 +36,39 @@ public class MainActivityArticles extends AppCompatActivity {
         articl1_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.article_one);
+                Intent intent = new Intent(MainActivityArticles.this, Articl1.class);
+                MainActivityArticles.this.startActivity(intent);
             }
         });
         Button articl2_but = findViewById(R.id.articl2);
         articl2_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.article_two);
+                Intent intent = new Intent(MainActivityArticles.this, Articl2.class);
+                MainActivityArticles.this.startActivity(intent);
             }
         });
         Button articl3_but = findViewById(R.id.articl3);
         articl3_but.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
-                setContentView(R.layout.article_three);
+                Intent intent = new Intent(MainActivityArticles.this, Articl3.class);
+                MainActivityArticles.this.startActivity(intent);
             }
         });
 
         Button articl4_but = findViewById(R.id.articl4);
         articl4_but.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
-                setContentView(R.layout.article_four);
+                Intent intent = new Intent(MainActivityArticles.this, Articl4.class);
+                MainActivityArticles.this.startActivity(intent);
             }
         });
 
         Button articl5_but = findViewById(R.id.articl5);
         articl5_but.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
-                setContentView(R.layout.article_five);
+                Intent intent = new Intent(MainActivityArticles.this, Articl5.class);
+                MainActivityArticles.this.startActivity(intent);
             }
         });
 
@@ -62,23 +76,24 @@ public class MainActivityArticles extends AppCompatActivity {
         articl6_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.article_six);
+                Intent intent = new Intent(MainActivityArticles.this, Articl6.class);
+                MainActivityArticles.this.startActivity(intent);
             }
         });
 
         Button articl7_but = findViewById(R.id.articl7);
         articl7_but.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
-                setContentView(R.layout.article_seven);
+                Intent intent = new Intent(MainActivityArticles.this, Articl7.class);
+                MainActivityArticles.this.startActivity(intent);
             }
         });
 
         Button articl8_but = findViewById(R.id.articl8);
         articl8_but.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
-                setContentView(R.layout.article_eight);
+                Intent intent = new Intent(MainActivityArticles.this, Articl8.class);
+                MainActivityArticles.this.startActivity(intent);
             }
         });
 
@@ -86,19 +101,18 @@ public class MainActivityArticles extends AppCompatActivity {
         articl9_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.article_nine);
+                Intent intent = new Intent(MainActivityArticles.this, Articl9.class);
+                MainActivityArticles.this.startActivity(intent);
             }
         });
 
         Button articl10_but = findViewById(R.id.articl10);
         articl10_but.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
-                setContentView(R.layout.article_ten);
+                Intent intent = new Intent(MainActivityArticles.this, Articl10.class);
+                MainActivityArticles.this.startActivity(intent);
             }
         });
-
-
     }
 
 }
