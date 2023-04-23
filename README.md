@@ -11,6 +11,6 @@
   </h2>
 </p>
 
-| <img src="img/screen.jpg" width="300"> | <img src="img/s4.png"> |
+| <img src="img/screen.jpg" height="300"> | <img src="img/s4.png"  height="300> |
 | ---------------------------------------------- | -------------------------------------------- | 
 
