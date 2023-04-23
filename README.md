@@ -13,7 +13,7 @@
 
 
 <p align="center">
-| <img src="img/screen.jpg" height="300px"> | <img src="img/s4.png" height="300px"> |
+ <img src="img/screen.jpg" height="300px">  <img src="img/s4.png" height="300px"> 
 
 
 </p>
