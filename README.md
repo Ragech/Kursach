@@ -11,12 +11,5 @@
   </h2>
 </p>
 
-<p display="flex">
-  <p align="start">
-   <img src="img/screen.jpg" alt="Logo" width="200">
-</p>
-
-<p align="end">
-   <img src="img/s1.png" alt="Logo" width="400">
-</p>
-</p>
+| <img src="img/screen.jpg"> | <img src="img/s1.png"> | <img src="docs_resources/share_device.png"> | <img src="docs_resources/spaces_device.png"> |
+| ---------------------------------------------- | -------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
