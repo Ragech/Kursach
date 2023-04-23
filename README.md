@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/Ragech/SunMoon">
-    <img src="images/logo2.png" alt="Logo">
+    <img src="img/logo2.png" alt="Logo">
   </a>
 
   <p align="center">
