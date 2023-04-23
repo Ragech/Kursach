@@ -1,2 +1,2 @@
 <h1 align="center">Sunmoon</h1>
-<img src="img/screen.jpg" alt="Logo" height="50">
+<img src="img/logo2.png" alt="Logo">
