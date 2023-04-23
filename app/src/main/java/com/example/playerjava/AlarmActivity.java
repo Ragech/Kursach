@@ -56,11 +56,15 @@ public class AlarmActivity extends AppCompatActivity {
         randnum2 = random.nextInt(10)+1;
         num1.setText(String.valueOf(randnum1));
         num2.setText(String.valueOf(randnum2));
+
     }
 
     public void OffAlarm (View v){
         int num = Integer.parseInt(edit_answer.getText().toString());
-        if (randnum1+randnum2==num){
+        if (edit_answer.getText().toString().isEmpty()){
+            Toast.makeText(this, "Введите пожалуйста ответ", Toast.LENGTH_SHORT).show();
+        }
+        else if (randnum1+randnum2==num){
             Intent intent = new Intent (this,MainActivity.class);
             startActivity(intent);
             Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
