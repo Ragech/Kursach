@@ -97,10 +97,12 @@
                             android:layout_width="155dp"
                             android:layout_height="40dp"
                             app:backgroundTint="@null"
-                            android:background="@drawable/dark_button"
-                            android:paddingHorizontal="25dp"
-                            android:text="Подробнее"
-                            android:textColor="#dedddc"/>
+                 
+                        android:background="@drawable/radius"
+                            
+                        android:paddingHorizontal="25dp"
+                        android:text="Подробнее"
+                        android:textColor="#dedddc"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -159,7 +161,8 @@
                             android:layout_width="155dp"
                             android:layout_height="40dp"
                             app:backgroundTint="@null"
-                            android:background="@drawable/dark_button"
+                            android:background="@drawable/radius"
+
                             android:paddingHorizontal="25dp"
                             android:text="Подробнее"
                             android:textColor="#dedddc"/>
@@ -222,7 +225,8 @@
                             android:layout_width="155dp"
                             android:layout_height="40dp"
                             app:backgroundTint="@null"
-                            android:background="@drawable/dark_button"
+
+                            android:background="@drawable/radius"
                             android:paddingHorizontal="25dp"
                             android:text="Подробнее"
                             android:textColor="#dedddc"/>
@@ -285,7 +289,8 @@
                             android:layout_width="155dp"
                             android:layout_height="40dp"
                             app:backgroundTint="@null"
-                            android:background="@drawable/dark_button"
+
+                            android:background="@drawable/radius"
                             android:paddingHorizontal="25dp"
                             android:text="Подробнее"
                             android:textColor="#dedddc"/>
@@ -348,7 +353,8 @@
                             android:layout_width="155dp"
                             android:layout_height="40dp"
                             app:backgroundTint="@null"
-                            android:background="@drawable/dark_button"
+
+                            android:background="@drawable/radius"
                             android:paddingHorizontal="25dp"
                             android:text="Подробнее"
                             android:textColor="#dedddc"/>
@@ -411,7 +417,9 @@
                             android:layout_width="155dp"
                             android:layout_height="40dp"
                             app:backgroundTint="@null"
+
                             android:background="@drawable/dark_button"
+
                             android:paddingHorizontal="25dp"
                             android:text="Подробнее"
                             android:textColor="#dedddc"/>
@@ -474,7 +482,9 @@
                             android:layout_width="155dp"
                             android:layout_height="40dp"
                             app:backgroundTint="@null"
-                            android:background="@drawable/dark_button"
+
+                            android:background="@drawable/radius"
+
                             android:paddingHorizontal="25dp"
                             android:text="Подробнее"
                             android:textColor="#dedddc"/>
@@ -535,10 +545,12 @@
                             android:layout_width="155dp"
                             android:layout_height="40dp"
                             app:backgroundTint="@null"
-                            android:background="@drawable/dark_button"
-                            android:paddingHorizontal="25dp"
-                            android:text="Подробнее"
-                            android:textColor="#dedddc"/>
+                  
+                        android:background="@drawable/radius"
+             
+                        android:paddingHorizontal="25dp"
+                        android:text="Подробнее"
+                        android:textColor="#dedddc"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -597,10 +609,12 @@
                             android:layout_width="155dp"
                             android:layout_height="40dp"
                             app:backgroundTint="@null"
-                            android:background="@drawable/dark_button"
-                            android:paddingHorizontal="25dp"
-                            android:text="Подробнее"
-                            android:textColor="#dedddc"/>
+
+                        android:background="@drawable/radius"
+
+                        android:paddingHorizontal="25dp"
+                        android:text="Подробнее"
+                        android:textColor="#dedddc"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -659,10 +673,11 @@
                             android:layout_width="155dp"
                             android:layout_height="40dp"
                             app:backgroundTint="@null"
-                            android:background="@drawable/dark_button"
-                            android:paddingHorizontal="25dp"
-                            android:text="Подробнее"
-                            android:textColor="#dedddc"/>
+                        android:background="@drawable/radius"
+
+                        android:paddingHorizontal="25dp"
+                        android:text="Подробнее"
+                        android:textColor="#dedddc"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -682,7 +697,8 @@
         </LinearLayout>
 
     </ScrollView>
-
-
-
+    
 </RelativeLayout>
+
+
+
