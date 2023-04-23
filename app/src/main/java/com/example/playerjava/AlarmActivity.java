@@ -101,7 +101,11 @@ public class AlarmActivity extends AppCompatActivity {
         // super.onBackPressed();
         // ваш код
     }
-
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        // ignore orientation/keyboard change
+        super.onConfigurationChanged(newConfig);
+    }
     @Override
     protected void onDestroy() {
         if (ringtone != null && ringtone.isPlaying()) {
