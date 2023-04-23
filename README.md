@@ -25,7 +25,11 @@
 
 ### Installation
 
-1. Download from our website (https://sunmoonapp.000webhostapp.com/)
+1. Download from our website https://sunmoonapp.000webhostapp.com/
+
+```sh
+https://sunmoonapp.000webhostapp.com/
+```
 
 2. Clone the repo
 
@@ -33,5 +37,5 @@
 git clone https://github.com/Ragech/SunMoon
 ```
 
-## Authors
+## Авторы
 Выполнено студентами 2 курса КФУ им. Вернадского, направления: Программная инженерия: Шарбаев Я. О., Гасилин Н. В., Мкртчян О., Агаев А. А., Капора А.
